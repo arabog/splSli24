@@ -43,3 +43,16 @@ threeInOne( [1,2,3])
 threeInOne( [1,2,3,4,5,6]) 
 threeInOne( [1,2,3,4,5,6,7,8,9])
 threeInOne( [1,3,5,2,4,6,7,7,7])
+
+// additional solution
+function threeInOne(arr){
+          var newArr = arr.slice();
+
+          var arrs = []
+
+          for (var i=0;i<arr.length/3;i++) {    
+                    arrs.push(newArr.splice(0,3).reduce(function(a, b) { return a + b; }, 0))
+          }
+
+          return arrs; 
+}
